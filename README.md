@@ -26,9 +26,7 @@ This task is aimed to test skills and knowledge on the following topics:
 
 ### SSH Key Submission
 
-Create a pull request to add your SSH public key to the repository. This key will be used for access to the deployed infrastructure.
-
-Upon merging your pull request, the infrastructure will be automatically provisioned.
+Submit your SSH public key via [eficrypto](https://eficrypto.eficode.com) to your contact person.
 
 ### Connectivity
 
