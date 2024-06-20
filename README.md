@@ -2,27 +2,25 @@
 
 ---
 
-This task involves the deployment of infrastructure using automation tools, updating system software, and configuring access for end users.
+This task involves deploying infrastructure using automation tools, updating system software, and configuring access for end users. The focus is on automating the process, documenting your work, and adhering to best practices. This should be considered as a production environment, so ensure all configurations and implementations are robust and secure.
 
 ## Prerequisites
 
-This task is aimed to test skills and knowledge on the following topics:
+To complete this task, you should be proficient in the following areas:
 
-- **Git and Gitlab**: You should be familiar with Git for forking the repository, creating branches, and submitting pull requests. Knowledge of Gitlab is also required for configuring and updating the instance.
+- **Git and GitLab**: Knowledge of Git is essential for forking repositories, creating branches, and submitting pull requests. Familiarity with GitLab is required for configuring and updating the instance.
 
-- **SSH Key Management**: You should understand how to generate an SSH key pair, including the public and private keys.
+- **SSH Key Management**: You should know how to generate an SSH key pair and understand the roles of the public and private keys.
 
-- **Infrastructure as Code (IaC)**: Basic knowledge of Infrastructure as Code tools such as Terraform or Ansible is required. You should be able to understand and manage the infrastructure configuration.
+- **Infrastructure as Code (IaC)**: Basic knowledge of IaC tools like Terraform or Ansible is needed to understand and manage infrastructure configuration.
 
-- **System Administration**: You should have experience with Linux system administration, including connecting to remote servers using SSH, performing system updates, and software installation.
+- **System Administration**: Experience with Linux system administration, including connecting to remote servers using SSH, performing system updates, and software installation, is required.
 
-- **Load Balancing**: Familiarity with load balancing concepts and tools are necessary to configure the access for end users.
+- **Load Balancing**: Understanding load balancing concepts and tools is necessary to configure user access.
 
 - **Security Best Practices**: Adherence to security best practices is critical, especially when working with SSH, sensitive data, and infrastructure management.
 
 ## Task Overview
-
----
 
 ### SSH Key Submission
 
@@ -30,37 +28,52 @@ Submit your SSH public key via [eficrypto](https://eficrypto.eficode.com) to you
 
 ### Connectivity
 
-The infrastructure includes two servers: Nginx and GitLab.
-The Nginx server has a public IP address, while the GitLab server does not. SSH Access for both machines are opened and will accept the submitted SSH Key for managing them.
+The infrastructure includes two servers: Nginx and GitLab. The Nginx server has a public IP address, while the GitLab server does not. Both servers will accept the submitted SSH Key for management.
 
 ### Software Updates
 
-Update the Ubuntu 20 server (Nginx) to Ubuntu 22.
-Update the GitLab server from version 15.11 to 16.
+1. Update the Nginx server from Ubuntu 20 to Ubuntu 22.
+2. Update the GitLab server to v17.0.2.
 
 ### GitLab SSH Cloning
 
 Configure the infrastructure to allow end users to clone Git repositories using SSH.
 
-### Gitlab runner configuration
+### GitLab Runner Configuration
 
-Enable a Gitlab runner to the instance and configure it to run on appropriate machine. Add a job that will build a container and store it into Gitlab Container Registry. 
+Enable a GitLab runner on the appropriate machine. Add a job to build a container and store it in the GitLab Container Registry.
 
-### Gitlab Pages configuration
+### GitLab Pages Configuration
 
-Enable a Gitlab Pages to the instance and configure it to run on appropriate machine. Add a job that will build a static website and store it into Gitlab Pages. Add a custom domain support to Gitlab and if you don't own a DNS send a examiner a request for DNS configuration and we will add a CNAME based on your request.
+Enable GitLab Pages on the appropriate machine. Add a job to build a static website and store it in GitLab Pages.
+
+### DNS
+
+You will be given the necessary domain entries at the beginning of the task.
 
 ### Documentation
 
-Draw an networking and logical architecture of the system you built. Document the process and automate the maintenance to proper level. 
+- Create a network and logical architecture diagram of the system you built.
+- Document the process thoroughly.
+- Automate the tasks to an appropriate level.
 
+### Evaluation Criteria
 
-### Helpful links
+- **Automation**: Utilize automation tools wherever possible to ensure consistency and repeatability.
+- **Documentation**: Provide clear and comprehensive documentation for all steps, configurations, and processes. This includes commenting on code and scripts used for automation.
+- **Security**: Adhere to security best practices throughout the task, particularly concerning SSH and sensitive data handling.
+- **Completeness**: Ensure that all required steps of the assignment are fully completed.
 
-https://nginx.org/en/docs/
-https://docs.gitlab.com/
+### Additional Information
 
----
+Keep in mind that this assignment is designed to evaluate your suitability for a role as a DevOps Expert at Eficode. Your solution should be easy to understand and reusable. Avoid over-engineering; often, the simplest solution is the best.
+
+### Helpful Links
+
+- [Nginx Documentation](https://nginx.org/en/docs/)
+- [GitLab Documentation](https://docs.gitlab.com/)
+- [Ansible Documentation](https://docs.ansible.com/)
+- [Terraform Documentation](https://www.terraform.io/docs/)
 
 ## Support
 
